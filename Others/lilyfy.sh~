@@ -1,0 +1,13 @@
+#!/bin/bash
+
+date
+
+for file in *.ly; do
+    if [[ $file =~ "Ly Core" ]]; then
+	true
+    else
+	lilypond "$file"
+    fi
+done
+
+date

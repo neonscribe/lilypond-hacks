@@ -1,7 +1,15 @@
-\include "jazz-chords.ily"
-\include "english.ly"
+%% -*- Mode: LilyPond -*-
+
+\include "lead-sheets.ily"
 \include "even-brace.ily"
-\version "2.18.2"
+
+\header {
+  title = "Give Me the Simple Life"
+  subtitle = \instrument
+  poet = "Harry Ruby"
+  composer = "Rube Bloom"
+  copyright = "© 1945 WB Music Corp."
+}
 
 verseLyrics = \lyricmode {
 Folks are blessed who make the best of ev -- 'ry day,
@@ -16,9 +24,11 @@ verseChords = \chordmode {
   g2:m6.9 c2:9.11+ f2:m f4:maj7 f4:7 bf2:sus9 bf2:9
 }
 
+verseKey = ef
+
 verseMelody = \relative f'' {
   \time 2/2
-  \key ef \major
+  \key \verseKey \major
   \clef \whatClef
 
   \mark \markup{ "Verse" }
@@ -140,9 +150,11 @@ refrainChords = \chordmode {
   \unset chordNameFunction
 }
 
+refrainKey = ef
+
 refrainMelody = \relative f'' {
   \time 2/2
-  \key ef \major
+  \key \refrainKey \major
   \clef \whatClef
   \tempo "Medium Up" 4 = 150
 
@@ -187,30 +199,7 @@ refrainMelody = \relative f'' {
   \bar "|."
 }
 
-\paper {
-  indent = 0.
-  tagline = ""
-  oddHeaderMarkup = \markup { 
-    \fill-line 
-    { 
-      "" %% \fromproperty #'page:page-number-string 
-      %% left 
-      \on-the-fly #not-first-page \fromproperty #'header:title 
-      %% center 
-      " " 
-      %% right 
-    } 
-  } 
-  evenHeaderMarkup = \oddHeaderMarkup 
-}
-
-\header {
-  title = "Give Me the Simple Life"
-  subtitle = \instrument
-  poet = "Harry Ruby"
-  composer = "Rube Bloom"
-  copyright = "© 1945 WB Music Corp."
-}
+\include "paper.ily"
 
 \markup {
   % Leave a gap after the header
@@ -221,8 +210,8 @@ refrainMelody = \relative f'' {
   <<
     { \context ChordNames 
       {
-      \override ChordName #'font-size = #+3
-      \override ChordName #'font-series = #'bold
+      \override ChordName.font-size = #+3
+      \override ChordName.font-series = #'bold
       \set chordChanges = ##t
      \transpose ef \whatKey {
        \verseChords
@@ -250,8 +239,8 @@ refrainMelody = \relative f'' {
   <<
     { \context ChordNames 
       {
-      \override ChordName #'font-size = #+3
-      \override ChordName #'font-series = #'bold
+      \override ChordName.font-size = #+3
+      \override ChordName.font-series = #'bold
       \set chordChanges = ##t
      \transpose ef \whatKey {
        \refrainChords
@@ -306,3 +295,18 @@ refrainMelody = \relative f'' {
   >>
   \layout { }
 }
+
+performanceNotes =
+\markup {
+  \column {
+    \vspace #2
+    \line { \huge { Verse: rubato vocal with guitar accompaniment } }
+    \line { \huge { Stop and count in refrain } }
+    \line { \huge { Vocal entire form } }
+    \line { \huge { guitar solo A1,A2 clarinet solo A1,A2 } }
+    \line { \huge { Vocal entire form, repeat bar 29 and 30 three times } }
+    \line { \huge { Stop at 31 on ''give'' a capella until ''life'' } }
+  }
+}
+
+\include "notes.ily"

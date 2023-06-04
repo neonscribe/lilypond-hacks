@@ -1,8 +1,16 @@
 %% -*- Mode: LilyPond -*-
 
-\include "jazz-chords.ily"
-\include "english.ly"
-\version "2.18.2"
+#(set-global-staff-size 18)
+
+\include "lead-sheets.ily"
+
+\header {
+  title = "East of the Sun (and West of the Moon)"
+  subtitle = \instrument
+  poet = ""
+  composer = "Brooks Bowman"
+  copyright = "© 1934 Brooks Bowman"
+}
 
 refrainLyrics = \lyricmode {
 East of the sun __ and west of the moon, __
@@ -23,7 +31,7 @@ refrainChords = \chordmode {
   a1:m7 a1:m7 c1:m6 c1:m6
 
   a1:m7 d1:7 fs2:m7.5- b2:7 e1:m7
-  a1:7 a1:7 a1:m7 d1:7
+  a1:13 a1:13 a1:m7 d1:13
 
   g1:maj7 g1:maj7 b1:m7 e1:9
   a1:m7 a1:m7 c1:m6 c1:m6
@@ -32,18 +40,17 @@ refrainChords = \chordmode {
   a1:m7 c1:m6 b1:m7 bf1:m7 
   
   a1:m7  d1:7 g1:maj7 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  a2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  d2:7
-  \unset chordNameFunction
+  \chordOpenParen{ a2:m7 }
+  \chordCloseParen{ d2:7 }
 }
+
+refrainKey = g
 
 refrainMelody = \relative f' {
   \time 4/4
-  \key g \major
+  \key \refrainKey \major
   \clef \whatClef
-  \tempo "Medium"
+  \tempo "Medium Swing" 4 = 140
 
   \mark \markup{ \box "A1" }
   
@@ -84,59 +91,25 @@ refrainMelody = \relative f' {
    \bar "|."
 }
 
-\paper {
-  indent = 0.
-  tagline = ""
-  oddHeaderMarkup = \markup { 
-    \fill-line 
-    { 
-      "" %% \fromproperty #'page:page-number-string 
-      %% left 
-      \on-the-fly #not-first-page \fromproperty #'header:title 
-      %% center 
-      " " 
-      %% right 
-    } 
-  } 
-  evenHeaderMarkup = \oddHeaderMarkup 
-}
-
-\header {
-  title = "East of the Sun (and West of the Moon)"
-  subtitle = \instrument
-  poet = ""
-  composer = "Brooks Bowman"
-  copyright = "© 1934 Brooks Bowman"
-}
+\include "paper.ily"
 
 \markup {
   % Leave a gap after the header
   \vspace #1
 }
 
-\score {
-  <<
-    { \context ChordNames 
-      {
-      \override ChordName #'font-size = #+3
-      \override ChordName #'font-series = #'bold
-      \set chordChanges = ##f
-     \transpose g \whatKey {
-       \refrainChords
-	}
-      }
-      }
-    \new Staff {
-      \context Voice = "voiceMelody" { 
-	\noDoubleAccidentalMusic \transpose g \whatKey {
-	  \refrainMelody
-	  }
-	}
-    }
-    \new Lyrics \lyricsto "voiceMelody"
-    {
-      \refrainLyrics
-    }
-  >>
-  \layout { }
+\include "refrain.ily"
+
+$(if #(not (string-contains instrument "Standard"))
+     #{ \pageBreak #} )
+
+performanceNotes =
+\markup {
+  \column {
+    \line { \huge { Intro band last 8, bass walks, guitar in two, vocal chorus } }
+    \line { \huge { Guitar solo full chorus, Clarinet solo full chorus } }
+    \line { \huge { Vocal out chorus } }
+  }
 }
+
+\include "notes.ily"
