@@ -93,9 +93,7 @@ refrainChords = \chordmode {
   g1:maj7 g1:maj7 b1:m7 e1:7.9-
   a1:m7 c2:m9 c2:m6 b1:m7 e1:7.9- a2:7.13 a2:7.13-
   a2:m7 d2:9 g1:6
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names 
-  ef1:maj7/g
-  \unset chordNameFunction  
+  \chordInsideParens{ ef1:maj7/g }
 }
 
 refrainMelody = \relative g' {

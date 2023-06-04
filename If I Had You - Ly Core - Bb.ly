@@ -61,13 +61,9 @@ musescoreRefrainChords = \chordmode {
 
   bf2 g4:m7 gf4:m7 f2:m7 bf2:7 ef1:maj7 af1:7
   d2:m df2:dim7 c2:m7 f2:9 bf2:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  g2:7 
-  \unset chordNameFunction
+  \chordOpenParen{ g2:7 }
   c2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  f2:7
-  \unset chordNameFunction
+  \chordCloseParen{ f2:7 }
 }
 
 musescorePlusDaveRefrainChords = \chordmode {
@@ -82,13 +78,9 @@ musescorePlusDaveRefrainChords = \chordmode {
 
   bf2 g4:m7 gf4:m7 f2:m7 bf2:7 ef1:maj7 ef2:m6 af2:7
   bf2 d4:m7 df4:dim7 c2:m7 f4:7 f4:7.5+ bf2
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  g2:m7
-  \unset chordNameFunction
+  \chordOpenParen{ g2:7 }
   c2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  f2:7
-  \unset chordNameFunction
+  \chordCloseParen{ f2:7 }
 }
 
 refrainChords = \musescorePlusDaveRefrainChords

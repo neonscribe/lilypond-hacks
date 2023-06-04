@@ -36,11 +36,8 @@ refrainNewRealChords = \chordmode {
   df1:maj7 gf1:13 c1:m7 b1:dim7
   
   bf1:m7 ef1:7 af1:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  g2:m7.5-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  c2:7
-  \unset chordNameFunction
+  \chordOpenParen{ g2:m7.5- }
+  \chordCloseParen{ c2:7 }
 }
 
 refrainRealBookSixthChords = \chordmode {
@@ -57,11 +54,8 @@ refrainRealBookSixthChords = \chordmode {
   df1:maj7 gf1:13 c1:m7 b1:dim7
   
   bf1:m7 ef1:7 af1:maj7
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  g2:m7.5-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  c2:7.9-
-  \unset chordNameFunction
+  \chordOpenParen{ g2:m7.5- }
+  \chordCloseParen{ c2:7.9- }
 }
 
 refrainChords = \refrainRealBookSixthChords

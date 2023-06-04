@@ -66,9 +66,7 @@ refrainChords = \chordmode {
   ef2:/g af2:7
 
   ef2 f2:m7/bf ef2
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names 
-  bf2:7.5+
-  \unset chordNameFunction  
+  \chordInsideParens{ bf2:7.5+ }
 }
 
 refrainKey = ef

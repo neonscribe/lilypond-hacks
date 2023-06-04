@@ -35,9 +35,7 @@ refrainChords = \chordmode {
   af2:maj7 f2:m7 bf2:m7 ef2:7
   d2:m7.5- g2:7 c2:m7.5- f2:7 bf2:m7 ef2:7 af2:6
   
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  ef2:7
-  \unset chordNameFunction
+  \chordInsideParens{ ef2:7 }
 }
 
 refrainMelody = \relative f'' {

@@ -54,9 +54,7 @@ refrainChords = \chordmode {
 
   c2:m9 f2:7 d2:m7 cs2:dim7
   c2:m7 f4:7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  ef4:7
-  \unset chordNameFunction
+  \chordInsideParens{ ef4:7 }
   d2:m7.5- g2:7 b2:dim7 c2:m7.5-
   d2:m7 g2:9 
   
@@ -65,14 +63,10 @@ refrainChords = \chordmode {
   c2:m7 f2:7 bf1:6
   
   f2:m7.11 bf2:7.9+.5+ ef2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  c2:m7
-  \unset chordNameFunction
+  \chordInsideParens{ c2:m7 }
   f2:m7.11 bf2:7.9+.5+ ef1:maj7
   e2:m7.11 a2:7.9+.5+ d2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  b2:m7
-  \unset chordNameFunction
+  \chordInsideParens{ b2:m7 }
   g2:m7 c2:7 f2:sus9 f2:7
   
   c2:m7 f2:13 bf2:6

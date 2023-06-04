@@ -29,9 +29,7 @@ I'll tie a lov -- er's knot
 refrainChords = \chordmode {
   c1:6.9 a1:7 d1:m7 g1:7
   c2 c2:7 f2:maj7 bf2:7 c2:6/g g2:7 c2
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names 
-  g2:7
-  \unset chordNameFunction
+  \chordInsideParens{ g2:7 }
 
   c1:6.9 a1:7 d1:m7 g1:7
   c2 c2:7 f2:maj7 bf2:7 c2:6/g g2:7 c1:6.9
@@ -41,9 +39,7 @@ refrainChords = \chordmode {
 
   c1:6.9 a1:7 d1:m7 g1:7
   c2 c2:7 f2:maj7 bf2:7 c2:6/g g2:7 c2:6
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names 
-  g2:7
-  \unset chordNameFunction
+  \chordInsideParens{ g2:7 }
 }
 
 refrainKey = c

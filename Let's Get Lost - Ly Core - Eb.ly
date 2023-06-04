@@ -25,11 +25,8 @@ refrainRealJazzChords = \chordmode {
   g1:m7.5- c1:7 g1:m7.5- c1:7
   f1:m7 bf1:7 ef2:maj7 af2:7 g2:7 c2:7.5+
   f1:m7 bf1:7 ef1:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  bf2:sus7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  bf2:7.9-
-  \unset chordNameFunction
+  \chordOpenParen{ bf2:sus7 }
+  \chordCloseParen{ bf2:7.9- }
 }
 
 refrainChords = \chordmode {

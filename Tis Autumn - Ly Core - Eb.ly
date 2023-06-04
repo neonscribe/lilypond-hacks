@@ -11,9 +11,7 @@ verseLyrics = \lyricmode {
 
 verseChords = \chordmode {
   f2:m11 bf2:13 ef2:6.9
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  c2:aug7.9+
-  \unset chordNameFunction
+  \chordInsideParens{ c2:aug7.9+ }
   f2:m9 bf2:13.9-
   ef1:6.9 a2:m11 d2:13 g2:maj7 e2:m7 a1:m7 d2:sus9 d2:aug7 g1:m7 c2:13 c4:aug9
 }
@@ -59,34 +57,24 @@ refrainChords = \chordmode {
   c4:aug7
   
   f1:m7 bf1:aug9 ef2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f2:m7
-  \unset chordNameFunction
+  \chordInsideParens{ f2:m7 }
   g2:m7 c2:7.9- f2:m7 df2:9.11+ c2:m7 f2:13
   f2:m7 bf2:13 ef2:6 c2:aug7.9-
 
   f1:m7 bf1:aug9 ef2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f2:m7
-  \unset chordNameFunction
+  \chordInsideParens{ f2:m7 }
   g2:m7 c2:7.9- f2:m7 df2:9.11+ c2:m7 f2:13
   f2:m7 bf2:13 ef1:6
   
   bf2:m7 ef2:9 bf2:m7 ef2:9 af2:6 ef2:aug7.9- af1:6
   c2:m7 f2:9 c2:m7 f2:9 f2:m9 c2:aug7.9+ f2:9 bf4:9
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  c4:7.9-
-  \unset chordNameFunction
+  \chordInsideParens{ c4:7.9- }
 
   f1:m7 bf1:aug9 ef2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f2:m7
-  \unset chordNameFunction
+  \chordInsideParens{ f2:m7 }
   g2:m7 c2:7.9- f2:m7 df2:9.11+ c2:m7 f2:13
   f2:m7 bf2:13 ef2:6
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  c4:aug7.9-
-  \unset chordNameFunction
+  \chordInsideParens{ c4:aug7.9- }
 }
 
 refrainMelody = \relative f'' {

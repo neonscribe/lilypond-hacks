@@ -110,13 +110,9 @@ refrainChords = \chordmode {
   ef1:6 ef1:6 d1:m7.5- g1:7.9-
   c1:m7 c1:m7 g1:m7.5- c1:7.9-
   f1:m7 f1:m7 g2:m7 c2:m7 f2:m7 bf2:13.9- ef2:6 ef2:6/g af2:6 a2:dim7 ef2:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  c2:m7
-  \unset chordNameFunction
+  \chordOpenParen{ c2:m7 }
   f2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  bf2:7.9-
-  \unset chordNameFunction
+  \chordCloseParen{ bf2:7.9- }
 }
 
 refrainKey = ef

@@ -74,9 +74,7 @@ refrainChordsSRB = \chordmode {
   
   f1:7/c f1:7/c e1:7/b e1:7/b
   g1:m6/bf a1:7.9- d1:m7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  a1:7.9-
-  \unset chordNameFunction
+  \chordInsideParens{ a1:7.9- }
 }
 
 refrainChordsDave = \chordmode {
@@ -91,9 +89,7 @@ refrainChordsDave = \chordmode {
   
   c1:m11 f1:9 b1:m11 e1:7.9-
   g1:m6/bf a1:7 d1:m
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  e2:m7.5-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
+  \chordInsideParens{ e2:m7.5- }
   a2:7
   \unset chordNameFunction
 }

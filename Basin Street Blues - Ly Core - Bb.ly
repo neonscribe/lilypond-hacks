@@ -25,9 +25,7 @@ verseLyrics = \lyricmode {
 }
 
 verseChords = \chordmode {
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f4:7
-  \unset chordNameFunction
+  \chordInsideParens{ f4:7 }
   bf4 c4:m7 cs8:dim7 bf4./d bf4 c4:m7 cs8:dim7 bf4./d
   bf4/d df4:m6 c8:m7 f4.:9 bf4/d df4:m6 c8:m7 f4.:9
   bf2 bf2:7/af ef2:6/g ef2:m6/gf bf4/f r2. r2. f4:7

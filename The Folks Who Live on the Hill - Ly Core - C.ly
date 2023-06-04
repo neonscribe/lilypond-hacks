@@ -91,20 +91,12 @@ refrainChords = \chordmode {
   e2:m7 a2:m7 d2:m7 g2:7 bf2:7.5- a2:7 d2:m7 g2:7
   e2:m7 a2:m7 d2:m7 g2:7 
   c4:6 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  a4:m7 
-  \unset chordNameFunction
+  \chordOpenParen{ a4:m7 }
   d4:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g4:7
-  \unset chordNameFunction
+  \chordCloseParen{ g4:7 }
 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  fs2:m7.5-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  b2:7.9-
-  \unset chordNameFunction
-
+  \chordOpenParen{ fs2:m7.5- }
+  \chordCloseParen{ b2:7.9- }
   
   e1:m fs2:m7.5- b2:7.9- e2:m e2:m/ds e2:m/d a4:7/cs d4:7
   g2:6 g2:7/f e4:m7 a4:7 d4:m7 g4:7

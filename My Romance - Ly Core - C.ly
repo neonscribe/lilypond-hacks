@@ -17,39 +17,27 @@ refrainNewRealChords = \chordmode {
   s4
   
   c2.:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f4:maj7
-  \unset chordNameFunction
+  \chordInsideParens{ f4:maj7 }
   e2:m7 ef2:dim7 d2:m7 g2:7 c2:maj7 e2:7.5+
   a2:m e2:7.5+ a2:m7 a2:7.5+ d2:m7 g2:7 c2:maj7 c2:7
   
   f2:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  bf2:9
-  \unset chordNameFunction
+  \chordInsideParens{ bf2:9 }
   c2:maj7 c2:7 f2:maj7 
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  bf2:9
-  \unset chordNameFunction
+  \chordInsideParens{ bf2:9 }
   c1:maj7
   fs2:m7.5- b2:7 e2:m7 bf2:13 a2:m9 d2:13 d2:m7 g2:7
 
   c2.:maj7
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  f4:maj7
-  \unset chordNameFunction
+  \chordInsideParens{ f4:maj7 }
   e2:m7 ef2:dim7 d2:m7 g2:7 c2:maj7 e2:7.5+
   a2:m e2:7.5+ a2:m7 a2:7.5+ d2:m7 g2:7 c2:maj7 c2:7
 
   f2:maj7 a2:7.5+ d2:m7 d2:m7/c b2:m7.5- e2:7 a2:m7 af2:7
   c2:maj7/g a2:m7 d2:m7 g2:7 c2:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  a2:m7
-  \unset chordNameFunction
+  \chordOpenParen{ a2:m7 }
   d2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g2:7
-  \unset chordNameFunction
+  \chordCloseParen{ g2:7 }
 }
 
 refrainRealBookSixthChords = \chordmode {
@@ -74,11 +62,8 @@ refrainRealBookSixthChords = \chordmode {
 
   f2:maj7 a2:7 d2:m7 d2:m/c b2:m7.5- e2:7 a2:m7 af2:7
   c2:maj7/g a2:m7 d2:m7 g2:7 c1:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  d2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g2:7
-  \unset chordNameFunction
+  \chordOpenParen{ d2:m7 }
+  \chordCloseParen{ g2:7 }
 }
 
 refrainChords = \refrainRealBookSixthChords

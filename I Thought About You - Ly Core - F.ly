@@ -72,13 +72,9 @@ refrainChords = \chordmode {
   
   bf1:maj7 bf2:m7 ef2:7 f2:maj7 d2:m7 b2:m7.5- bf2:7.11+
   a2:m7 d2:7 g2:m7 c2:7 f2:6
-  %% \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
   d2:7.9-
-  %% \unset chordNameFunction
   g2:m7
-  %% \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
   c2:7
-  %% \unset chordNameFunction
   
 }
 

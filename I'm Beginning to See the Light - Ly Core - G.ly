@@ -70,11 +70,8 @@ refrainChords = \chordmode {
   
   a2:7 d2:7 g2
 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  a4:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  d4:7
-  \unset chordNameFunction
+  \chordOpenParen{ a4:m7 }
+  \chordCloseParen{ d4:7 }
 
   a2:7 d2:7 b1:7
 

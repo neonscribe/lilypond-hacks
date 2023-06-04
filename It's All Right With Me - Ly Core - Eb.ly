@@ -70,9 +70,7 @@ refrainStandardsRealBookChords = \chordmode {
   bf1:9 g1:m7.5- c1:9 f1:9 f1:9
   bf1:9 bf1:9 ef1:maj7 ef1:7 af1:maj7 af1:7
   f1:9 bf1:sus9 ef1:6
-  \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
-  g1:7
-  \unset chordNameFunction
+  \chordInsideParens{ g1:7 }
 }
 
 refrainAebersoldChords = \chordmode {
@@ -93,11 +91,8 @@ refrainAebersoldChords = \chordmode {
   c1:m7 c1:m7+ c1:m7 c1:m7 c1:m7 c1:m7 f1:m7 f1:m7
   bf1:7 bf1:7 g1:m7.5- c1:7 f1:7 f1:7 bf1:7 bf1:7
   ef1:maj7 ef1:7 af1:maj7 af1:7 f1:7 f1:m7/bf ef1:6 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  d2:m7.5-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g2:7.9-
-  \unset chordNameFunction
+  \chordOpenParen{ d2:m7.5- }
+  \chordCloseParen{ g2:7.9- }
 }
 
 refrainChords = \chordmode {
@@ -128,9 +123,7 @@ refrainChords = \chordmode {
   
   ef1:maj7 ef1:7 af1:maj7 af1:7
   f1:9 bf1:sus9 ef1:6
-  %% \set chordNameFunction = #begin-end-parenthesis-ignatzek-chord-names
   g1:7
-  %% \unset chordNameFunction
 }
 
 refrainKey = ef

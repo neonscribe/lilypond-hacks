@@ -47,15 +47,8 @@ refrainChords = \chordmode {
   
   d2:m7 g2:7 c1:6
 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  d2:m7
-  \unset chordNameFunction
-
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g:7
-  \unset chordNameFunction
-
-
+  \chordOpenParen{ d2:m7 }
+  \chordCloseParen{ g:7 }
 }
 
 refrainMelody = \relative g' {

@@ -55,11 +55,8 @@ refrainNewRealChords = \chordmode {
   c2:maj7 a2:m7 fs2:m7.5- b2:7
 
   e1:maj7 a2:m7 a2:7 d1:maj7
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names 
-  e2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names 
-  ef2:7.5-
-  \unset chordNameFunction
+  \chordOpenParen{ e2:m7 }
+  \chordCloseParen{ ef2:7.5- }
   d1:maj7 d2:m7 g2:7 e2:m7 ef2:7 d2:m7 df2:9.11+
 }
 

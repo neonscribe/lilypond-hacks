@@ -29,11 +29,8 @@ refrainChords = \chordmode {
 
   ef1:maj7 f1:7 bf1:maj9 d2:m7 g2:7
   c1:m7 f2:sus9 f2:7.9- bf1:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  f2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  bf2:7
-  \unset chordNameFunction
+  \chordOpenParen{ f2:m7 }
+  \chordCloseParen{ bf2:7 }
 
   ef1:maj7 f1:7 bf1:maj9 d2:m7 g2:7
   c1:m7 f2:sus9 f2:7.9- bf1:6 bf1:6

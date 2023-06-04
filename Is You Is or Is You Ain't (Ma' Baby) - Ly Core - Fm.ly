@@ -131,11 +131,8 @@ refrainChords = \chordmode {
   f2:m c2:7/g f2:m/af c2:7/g f1:m f2:m b2:13
   bf1:7 bf2:m7 ef2:7 af1:6 ef2:m7 af2:7
   bf1:7 bf2:m7 ef2:7 af1:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  df2:7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  c2:7
-  \unset chordNameFunction
+  \chordOpenParen{ df2:7 }
+  \chordCloseParen{ c2:7 }
 }
 
 refrainMelody = \relative g' {

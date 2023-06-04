@@ -135,13 +135,9 @@ firehouseRefrainChords = \chordmode {
 
   c4 bf4:6 a2:7 d2:7 g2:7.5+ c1 e2:m ef2:dim7
   d1:m7 g1:7 c2 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  f2:m6 
-  \unset chordNameFunction
+  \chordOpenParen{ f2:m6 }
   c2
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g2:7.5+
-  \unset chordNameFunction
+  \chordCloseParen{ g2:7.5+ }
 }
 
 realBookVolThreeRefrainChords = \chordmode {
@@ -156,17 +152,11 @@ realBookVolThreeRefrainChords = \chordmode {
 
   c2:maj7 a2:7 d2:m7 g2:7 c2:maj7 f2:maj7 e2:m7 ef2:dim7
   d1:m7 g1:7 c1:maj7
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  d4:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g4:7
-  \unset chordNameFunction
+  \chordOpenParen{ d4:m7 }
+  \chordCloseParen{ g4:7 }
 
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  e4:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  a4:7
-  \unset chordNameFunction
+  \chordOpenParen{ e4:m7 }
+  \chordCloseParen{ a4:7 }
 }
 
 newRealThreeRefrainChords = \chordmode {
@@ -181,13 +171,9 @@ newRealThreeRefrainChords = \chordmode {
 
   c2:maj7 a2:7.9- d2:7 g2:7.5+ c2:maj7 d2:m7 e2:m7 a2:7.9-
   d1:m7 g1:13 c2:6
-  \set chordNameFunction = #begin-parenthesis-ignatzek-chord-names
-  a2:m7
-  \unset chordNameFunction
+  \chordOpenParen{ a2:m7 }
   d2:m7
-  \set chordNameFunction = #end-parenthesis-ignatzek-chord-names
-  g2:7
-  \unset chordNameFunction
+  \chordCloseParen{ g2:7 }
 }
 
 refrainChords = \realBookVolThreeRefrainChords
